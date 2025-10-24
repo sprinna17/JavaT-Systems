@@ -1,6 +1,6 @@
 package javacode;
 
-public interface movements {
+public interface Movements {
     void sleep();
     void play();
     void eat();
