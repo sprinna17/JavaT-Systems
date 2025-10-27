@@ -1,16 +1,36 @@
 package javacode;
 
+import javacode.animals.*;
+
 import java.util.Scanner;
 
 public class StartAnimal {
-
-     public Animal startAnimal() {
-
-        System.out.println("Введите животное: (собака, кошка, корова, птица, лягушка, лошадь) --->");
+    public void start() {
+        System.out.println("\nВведите животное: (собака, кошка, корова, птица, лягушка, лошадь) --->");
+        System.out.println("Для выхода напишите 'exit'");
         Scanner in = new Scanner(System.in);
-        String yourAnimal = in.nextLine().toLowerCase();
+//        Animal animal;
+//        do {
+//            animal = processing();
+//        } while (animal == null);
+//    }
 
-        switch (yourAnimal) {
+        while (true) {
+            System.out.println("\nВведите животное: ");
+            String yourAnimal = in.nextLine().toLowerCase();
+            if (yourAnimal.equals("exit")) {
+                System.out.println("Завершено");
+                break;
+            }
+
+            Animal animal = processing(yourAnimal);
+        }
+    }
+
+     public Animal processing(String type) {
+
+
+        switch (type) {
             case "собака":
                 Dog dog = new Dog("Нордик", 5, "коричневая", "большой");
                 dog.describe();
@@ -40,10 +60,12 @@ public class StartAnimal {
                 Horse horse = new Horse("Земба", 7, "коричневая", "большая");
                 horse.describe();
                 horse.move();
+                break;
             default:
                 System.out.println("Попробуй снова - введи животное");
+                System.out.println("Для выхода напишите 'exit'");
         }
-         in.close();
+
          return null;
      }
 }

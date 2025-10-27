@@ -1,6 +1,9 @@
-package javacode;
+package javacode.animals;
 
-public class Cat implements Animal, Movements {
+import javacode.Animal;
+import javacode.interfacesMoves.Sleep;
+
+public class Cat implements Animal, Sleep {
     private final String name;
     private final int age;
     private final String color;
@@ -27,11 +30,5 @@ public class Cat implements Animal, Movements {
     public void sleep() {
         System.out.println(color + " кошка " + name + " спит");
     }
-    @Override public void play() {}
-    @Override public void eat() {}
-    @Override public void jump() {}
-    @Override public void fly() {}
-    @Override public void go() {}
-    @Override public void run() {}
 
 }

@@ -1,6 +1,9 @@
-package javacode;
+package javacode.animals;
 
-public class Frog implements Animal, Movements {
+import javacode.Animal;
+import javacode.interfacesMoves.Jump;
+
+public class Frog implements Animal, Jump {
     private final String name;
     private final int age;
     private final String color;
@@ -27,11 +30,6 @@ public class Frog implements Animal, Movements {
     public void jump() {
         System.out.println(color + " лягушка " + name + " прыгает");
     }
-    @Override public void play() {}
-    @Override public void sleep() {}
-    @Override public void run() {}
-    @Override public void fly() {}
-    @Override public void go() {}
-    @Override public void eat() {}
+
 }
 

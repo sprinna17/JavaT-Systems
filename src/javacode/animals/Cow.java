@@ -1,6 +1,9 @@
-package javacode;
+package javacode.animals;
 
-public class Cow implements Animal, Movements {
+import javacode.Animal;
+import javacode.interfacesMoves.Eat;
+
+public class Cow implements Animal, Eat {
     private final String name;
     private final int age;
     private final String color;
@@ -27,12 +30,6 @@ public class Cow implements Animal, Movements {
     public void eat() {
         System.out.println(color + " корова " + name + " ест");
     }
-    @Override public void play() {}
-    @Override public void sleep() {}
-    @Override public void jump() {}
-    @Override public void fly() {}
-    @Override public void go() {}
-    @Override public void run() {}
 
 }
 

@@ -1,6 +1,9 @@
-package javacode;
+package javacode.animals;
 
-public class Dog implements Animal, Movements {
+import javacode.Animal;
+import javacode.interfacesMoves.Play;
+
+public class Dog implements Animal, Play {
     private final String name;
     private final int age;
     private final String color;
@@ -28,10 +31,4 @@ public class Dog implements Animal, Movements {
         System.out.println(color + " собака " + name + " играет");
     }
 
-    @Override public void sleep() {}
-    @Override public void eat() {}
-    @Override public void jump() {}
-    @Override public void fly() {}
-    @Override public void go() {}
-    @Override public void run() {}
 }
