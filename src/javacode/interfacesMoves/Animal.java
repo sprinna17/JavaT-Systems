@@ -1,7 +1,6 @@
-package javacode;
+package javacode.interfacesMoves;
 
 public interface Animal {
     void describe();
-    void move();
 
 }

@@ -1,6 +1,6 @@
 package javacode.animals;
 
-import javacode.Animal;
+import javacode.interfacesMoves.Animal;
 import javacode.interfacesMoves.Eat;
 
 public class Cow implements Animal, Eat {
@@ -19,11 +19,6 @@ public class Cow implements Animal, Eat {
     @Override
     public void describe() {
         System.out.println(color + " корова " + name + ", " + size + ", возраст: " + age);
-    }
-
-    @Override
-    public void move() {
-        eat();
     }
 
     @Override

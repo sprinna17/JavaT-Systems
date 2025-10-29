@@ -1,6 +1,6 @@
 package javacode;
 
-public class Main {
+public class StartDescribeAnimalApp {
     public static void main(String[] args) {
 
         StartAnimal animal = new StartAnimal();

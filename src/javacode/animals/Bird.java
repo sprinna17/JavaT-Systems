@@ -1,6 +1,6 @@
 package javacode.animals;
 
-import javacode.Animal;
+import javacode.interfacesMoves.Animal;
 import javacode.interfacesMoves.Fly;
 
 public class Bird implements Animal, Fly {
@@ -19,11 +19,6 @@ public class Bird implements Animal, Fly {
     @Override
     public void describe() {
         System.out.println(color + " птица " + name + ", " + size + ", возраст: " + age);
-    }
-
-    @Override
-    public void move() {
-        fly();
     }
 
     @Override

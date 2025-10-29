@@ -9,11 +9,6 @@ public class StartAnimal {
         System.out.println("\nВведите животное: (собака, кошка, корова, птица, лягушка, лошадь) --->");
         System.out.println("Для выхода напишите 'exit'");
         Scanner in = new Scanner(System.in);
-//        Animal animal;
-//        do {
-//            animal = processing();
-//        } while (animal == null);
-//    }
 
         while (true) {
             System.out.println("\nВведите животное: ");
@@ -23,49 +18,48 @@ public class StartAnimal {
                 break;
             }
 
-            Animal animal = processing(yourAnimal);
+            AnimalType type = AnimalType.convertToEnum(yourAnimal);
+            processing(type);
         }
     }
 
-     public Animal processing(String type) {
-
-
+     private void processing(AnimalType type) {
+        if (type == null) {
+            System.out.println("Попробуй снова - введи животное");
+            System.out.println("Для выхода напишите 'exit'");
+            return;
+        }
         switch (type) {
-            case "собака":
+            case DOG:
                 Dog dog = new Dog("Нордик", 5, "коричневая", "большой");
                 dog.describe();
-                dog.move();
+                dog.play();
                 break;
-            case "кошка":
+            case CAT:
                 Cat cat = new Cat("Марфута", 9, "белая", "маленькая");
                 cat.describe();
-                cat.move();
+                cat.sleep();
                 break;
-            case "корова":
+            case COW:
                 Cow cow = new Cow("Дашка", 3, "черно-белая", "большая");
                 cow.describe();
-                cow.move();
+                cow.eat();
                 break;
-            case "птица":
+            case BIRD:
                 Bird bird = new Bird("Троша", 4, "зеленая", "маленький");
                 bird.describe();
-                bird.move();
+                bird.fly();
                 break;
-            case "лягушка":
+            case FROG:
                 Frog frog = new Frog("Фрог", 2, "зеленая", "маленькая");
                 frog.describe();
-                frog.move();
+                frog.jump();
                 break;
-            case "лошадь":
+            case HORSE:
                 Horse horse = new Horse("Земба", 7, "коричневая", "большая");
                 horse.describe();
-                horse.move();
+                horse.run();
                 break;
-            default:
-                System.out.println("Попробуй снова - введи животное");
-                System.out.println("Для выхода напишите 'exit'");
         }
-
-         return null;
      }
 }

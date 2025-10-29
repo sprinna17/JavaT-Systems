@@ -1,6 +1,6 @@
 package javacode.animals;
 
-import javacode.Animal;
+import javacode.interfacesMoves.Animal;
 import javacode.interfacesMoves.Play;
 
 public class Dog implements Animal, Play {
@@ -19,11 +19,6 @@ public class Dog implements Animal, Play {
     @Override
     public void describe() {
         System.out.println(color + " собака " + name + ", " + size + ", возраст: " + age);
-    }
-
-    @Override
-    public void move() {
-        play();
     }
 
     @Override

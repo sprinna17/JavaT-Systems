@@ -1,6 +1,6 @@
 package javacode.animals;
 
-import javacode.Animal;
+import javacode.interfacesMoves.Animal;
 import javacode.interfacesMoves.Run;
 
 public class Horse implements Animal, Run {
@@ -19,11 +19,6 @@ public class Horse implements Animal, Run {
     @Override
     public void describe() {
         System.out.println(color + " лошадь " + name + ", " + size + ", возраст: " + age);
-    }
-
-    @Override
-    public void move() {
-        run();
     }
 
     @Override
