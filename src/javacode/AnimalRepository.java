@@ -10,4 +10,5 @@ public class AnimalRepository {
     public AnimalRepository() {
         this.animals = new HashMap<>();
     }
+
 }
