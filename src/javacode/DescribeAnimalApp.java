@@ -1,9 +1,9 @@
 package javacode;
 
-public class StartDescribeAnimalApp {
+public class DescribeAnimalApp {
     public static void main(String[] args) {
 
-        StartAnimal animal = new StartAnimal();
+        AnimalObserver animal = new AnimalObserver();
         animal.start();
 
     }

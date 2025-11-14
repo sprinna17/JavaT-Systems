@@ -1,29 +1,31 @@
 package javacode.animals;
 
-import javacode.interfacesMoves.Animal;
+import javacode.interfacesMoves.AnimalAbstract;
 import javacode.interfacesMoves.Run;
 
-public class Horse implements Animal, Run {
-    private final String name;
-    private final int age;
-    private final String color;
-    private final String size;
+public class Horse extends AnimalAbstract implements Run {
 
     public Horse(String name, int age, String color, String size) {
-        this.name = name;
-        this.age = age;
-        this.color = color;
-        this.size = size;
+        super(name, age, color, size);
     }
 
     @Override
     public void describe() {
-        System.out.println(color + " лошадь " + name + ", " + size + ", возраст: " + age);
+        System.out.println(color + " horse " + name + ", " + size + ", age: " + age);
     }
 
     @Override
+    public void eat() { System.out.println("He eats");  }
+
+    @Override
+    public void go() { System.out.println("He goes");  }
+
+    @Override
+    public void sleep() { System.out.println("He sleeps");  }
+
+    @Override
     public void run() {
-        System.out.println(color + " лошадь " + name + " бежит");
+        System.out.println(color + " horse " + name + " run");
     }
 
 }

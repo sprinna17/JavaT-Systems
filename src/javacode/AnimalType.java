@@ -1,12 +1,12 @@
 package javacode;
 
 public enum AnimalType {
-    DOG("собака"),
-    CAT("кошка"),
-    BIRD("птица"),
-    COW("корова"),
-    FROG("лягушка"),
-    HORSE("лошадь");
+    DOG("dog"),
+    CAT("cat"),
+    BIRD("bird"),
+    COW("cow"),
+    FROG("frog"),
+    HORSE("horse");
 
     private final String nameOfAnimal;
 
@@ -15,7 +15,6 @@ public enum AnimalType {
    }
 
    public static AnimalType convertToEnum(String text) {
-       if (text == null) return null;
        for(AnimalType t : values())
          if  (t.nameOfAnimal.equalsIgnoreCase(text)) {
            return t;

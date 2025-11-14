@@ -1,30 +1,26 @@
 package javacode.animals;
 
-import javacode.interfacesMoves.Animal;
-import javacode.interfacesMoves.Eat;
 
-public class Cow implements Animal, Eat {
-    private final String name;
-    private final int age;
-    private final String color;
-    private final String size;
+import javacode.interfacesMoves.AnimalAbstract;
 
+public class Cow extends AnimalAbstract {
     public Cow(String name, int age, String color, String size) {
-        this.name = name;
-        this.age = age;
-        this.color = color;
-        this.size = size;
+        super(name, age, color, size);
     }
 
     @Override
     public void describe() {
-        System.out.println(color + " корова " + name + ", " + size + ", возраст: " + age);
+        System.out.println(color + " cow " + name + ", " + size + ", age: " + age);
     }
 
     @Override
-    public void eat() {
-        System.out.println(color + " корова " + name + " ест");
-    }
+    public void eat() { System.out.println("She eats");  }
+
+    @Override
+    public void go() { System.out.println("She goes");  }
+
+    @Override
+    public void sleep() { System.out.println("She sleeps");  }
 
 }
 
